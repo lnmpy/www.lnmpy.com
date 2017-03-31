@@ -1,0 +1,36 @@
+@startuml
+
+title Neutron OVSPlugin的类图
+
+NeutronDbPluginV2 <|-- OVSNeutronPluginV2 : 继承关系
+External_net_db_mixin <|-- OVSNeutronPluginV2
+L3_NAT_db_mixin <|-- OVSNeutronPluginV2
+
+NeutronPluginBaseV2 <|-- NeutronDbPluginV2 : 实现抽象方法
+RouterPluginBase <|-- L3_NAT_db_mixin : 实现抽象方法
+
+abstract class NeutronPluginBaseV2 {
+	create_subnet()
+	update_subnet()
+	get_subnet()
+	get_subnets()
+}
+abstract class RouterPluginBase {
+	create_router()
+    add_router_interface()
+    create_floatingip()
+}
+
+
+
+note as Comment
+  <color:royalBlue>
+  (1) 这里只是列出了部分的类
+  (2) 对于不同的plugin,基本上都是类似这种模式,一个class作为core_plugin,
+  继承了NeutronDbPluginV2以及extensions目录下的不同的Plugin。然后就具有了操作
+  db的方法，接下来也便于map成Resource使用
+  </color>
+
+end note
+
+@enduml

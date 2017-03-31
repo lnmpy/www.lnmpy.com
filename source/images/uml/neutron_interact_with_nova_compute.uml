@@ -1,0 +1,59 @@
+@startuml
+
+title Neutron Interact With Nova Compute
+
+start
+:Exec Command: nova boot;
+:0 _build_instance();
+:1 _allocate_network();
+:2. allocate_network_async();
+:3 network_api.allocate_for_instance();
+note right
+  network_api_class = nova.network.neutronv2.api.API
+end note
+if (4 specified network ?) then (yes)
+  :use the specified network;
+else (no)
+  :choose the available network;
+endif
+
+if (4 specified port ?) then (yes)
+  :post msg through neutronclient
+  update port and bind the device;
+else (no)
+  #red:post msg through neutronclient
+  create port and bind the device;
+  note right
+    attention to the difference before and after
+    this operation
+  end note
+endif
+
+:4 get_instance_nw_info();
+:4 _build_network_info_model();
+:5 for port in ports;
+
+
+:1 _spawn();
+:2 compute_driver.spawn();
+note right
+  it depend on the config you specified, mine is:
+  * compute_driver=libvirt.LibvirtDriver
+  so here we come to //virt/libvirt/driver.py=>LibvirtDriver.spawn//
+end note
+:3 get_disk_info();
+:3 _create_image();
+:3 _create_domain_and_network();
+
+while (more given network?)
+  #red:4 plug();
+  note right
+    it depend on the config you specified, mine is:
+    * libvirt_vif_driver=nova.virt.libvirt.vif.LibvirtHybridOVSBridgeDriver
+    the latest version of nova only has one, also the default <b>LibvirtGenericVIFDriver</b>
+  end note
+endwhile
+
+stop
+
+@enduml

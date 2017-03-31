@@ -1,0 +1,14 @@
+<%- js('js/waves.min') %>
+<%- js('js/main') %>
+
+<% if (theme.search){ %>
+<%- partial('search') %>
+<%- js('js/search') %>
+<% } %>
+
+<% if (theme.mathjax){ %>
+<%- partial('mathjax') %>
+<% } %>
+
+<%- partial('google-analytics') %>
+<%- partial('growingio-analytics') %>

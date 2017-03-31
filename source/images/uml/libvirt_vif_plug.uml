@@ -1,0 +1,30 @@
+@startuml
+
+title Libirt VIF plug
+
+start
+:plug();
+if (vif.vif_type?) then (ovs)
+  if (get_firewall_required()?) then (yes)
+    #red:plug_ovs_hybrid();
+  else (no)
+    if (libvirt_version>=0.9.0.11?) then(yes)
+        :plug_ovs_bridge();
+    else (no)
+        :plug_ovs_ethernet();
+    endif
+  endif
+else (bridge)
+  if (should_create_bridge and not multi_host?) then (yes)
+    if (should_create_vlan?) then(yes)
+      :ensure_vlan_bridge();
+      note right
+        infact it call the ensure_vlan and ensure_bridge()
+      end note
+    else(no)
+      :ensure_bridge();
+    endif
+  endif
+endif
+
+@enduml

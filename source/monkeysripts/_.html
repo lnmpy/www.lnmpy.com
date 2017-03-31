@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <table class="table table-hover">
+      <tr>
+        <th>
+          Script
+        </th>
+        <th>
+          Match
+        </th>
+        <th>
+          Version
+        </th>
+      </tr>
+      {% for d in metas %}
+      <tr>
+        <td><a href="{{d['url']}}">{{d["description"]}}</a></td>
+        <td>{{d['match']}}</td>
+        <td>{{d['version']}}</td>
+      </tr>
+      {% endfor %}
+      </table>
+  </body>
+</html>
