@@ -1,3 +1,13 @@
+dependencies:
+  override:
+    - make install
+
 test:
   override:
-    - make install && make deploy
+    - echo test
+
+deployment:
+  deploy:
+    branch: master
+    commands:
+      - make deploy
