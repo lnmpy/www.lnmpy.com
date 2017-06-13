@@ -1,0 +1,24 @@
+menu:
+  Home: /
+  Projects: /categories/project
+  Archives: /archives
+  Tags: /tags
+  Github: https://github.com/elvis-macak
+
+# duoshuo comment
+duoshuo: false
+duoshuo_name:
+
+# disqus comment
+disqus: true
+disqus_shortname: lnmpy
+
+# google analytics
+googleTrackId: 'UA-40753206-1'
+
+# baidu analytics
+baiduTrackId: '7c3c55661d86ad294eba178cc74a7d34'
+
+# growingio analytics
+growingioTrackId: 'a27aef759ca83c9c'
+

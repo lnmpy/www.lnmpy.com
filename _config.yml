@@ -64,11 +64,4 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: indigo
-
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type:
-
-disqus_shortname: lnmpy
+theme: Hacker

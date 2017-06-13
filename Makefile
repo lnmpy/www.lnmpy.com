@@ -7,12 +7,14 @@ folder = public
 all: build serve
 
 install:
+	cd themes && rm -rf Hacker && git clone git@github.com:elvis-macak/Hacker.git
 	npm install
 
 clean:
 	rm -rf $(folder)/*
 
 build:
+	cp themes/_config.yml themes/*/
 	hexo g
 
 deploy: clean build
