@@ -2,6 +2,7 @@
   "name": "www.lnmpy.com",
   "version": "1.0.0",
   "private": true,
+  "author": "elvis@lnmpy.com",
   "hexo": {
     "version": "3.2.2"
   },
