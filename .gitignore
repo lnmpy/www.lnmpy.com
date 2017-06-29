@@ -3,3 +3,4 @@ public
 *.swp
 themes/*/
 db.json
+debug.log

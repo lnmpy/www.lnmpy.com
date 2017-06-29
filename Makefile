@@ -4,7 +4,7 @@ SHELL = /bin/bash
 bucket = www.lnmpy.com
 folder = public
 
-all: build serve
+all: clean build serve
 
 install:
 	cd themes && rm -rf Hacker && git clone git@github.com:elvis-macak/Hacker.git
@@ -15,7 +15,7 @@ clean:
 
 build:
 	cp themes/_config.yml themes/*/
-	hexo g
+	hexo g --debug
 
 deploy: clean build
 	aws s3 sync $(folder) s3://$(bucket) --acl public-read --region ap-northeast-2
