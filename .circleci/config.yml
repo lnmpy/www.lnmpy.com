@@ -7,5 +7,6 @@ jobs:
       only:
         - master
     steps:
+      - checkout
       - run: make install
       - run: make deploy
