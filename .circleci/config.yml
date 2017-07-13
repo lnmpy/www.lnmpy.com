@@ -2,9 +2,9 @@ version: 2
 jobs:
   build:
     machine: true
-  branches:
-    only:
-      - master
-  steps:
-    - run: make install
-    - run: make deploy
+    branches:
+      only:
+        - master
+    steps:
+      - run: make install
+      - run: make deploy
