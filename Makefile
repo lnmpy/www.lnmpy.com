@@ -20,7 +20,7 @@ build:
 	hexo g --debug
 
 deploy: clean build
-	aws s3 sync $(dist) s3://$(bucket) --acl public-read --region ap-northeast-2
+	aws s3 sync $(dist) s3://$(bucket) --acl public-read --region ap-northeast-2 --cache-control max-age=86400
 
 serve:
 	hexo server -i 0.0.0.0 -o
