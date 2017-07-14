@@ -27,145 +27,17 @@ element是一堆符合特定名称的文件(主要为脚本)/文件夹的集合.
 - 输出变量
 
 以下列出了其执行的目录, 执行按先后顺率来排列
-<table style="width:96%;margin:2%;border:1px">
-  <tr>
-    <th>
-    操作
-    </th>
-    <th>
-    执行目录
-    </th>
-    <th>
-    接受变量
-    </th>
-    <th>
-    输出变量
-    </th>
-  </tr>
 
-  <tr>
-    <td>
-    root.d
-    </td>
-    <td>
-    outside chroot
-    </td>
-    <td>
-    $ARCH=i386|amd64|armhf
-    $TARGET_ROOT={path}
-    </td>
-    <td>
-    -
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-    extra-data.d
-    </td>
-    <td>
-    outside chroot
-    </td>
-    <td>
-    $TMP_HOOKS_PATH
-    </td>
-    <td>
-    -
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-    pre-install.d
-    </td>
-    <td>
-    in chroot
-    </td>
-    <td>
-    -
-    </td>
-    <td>
-    -
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-    install.d
-    </td>
-    <td>
-    in chroot
-    </td>
-    <td>
-    -
-    </td>
-    <td>
-    -
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-    post-install.d
-    </td>
-    <td>
-    in chroot
-    </td>
-    <td>
-    -
-    </td>
-    <td>
-    -
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-    block-device.d
-    </td>
-    <td>
-    outside chroot
-    </td>
-    <td>
-    $IMAGE_BLOCK_DEVICE={path}
-    $TARGET_ROOT={path}
-    </td>
-    <td>
-    $IMAGE_BLOCK_DEVICE={path}
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-    finalise.d
-    </td>
-    <td>
-    in chroot
-    </td>
-    <td>
-    -
-    </td>
-    <td>
-    -
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-    cleanup.d
-    </td>
-    <td>
-    outside chroot
-    </td>
-    <td>
-    $ARCH=i386|amd64|armhf
-    $TARGET_ROOT={path}
-    </td>
-    <td>
-    -
-    </td>
-  </tr>
-</table>
+|操作|执行目录|接受变量|输出变量
+|---|---|---|---|
+|root.d|outside chroot|$ARCH=(i386 amd64 armhf), $TARGET\_ROOT={path}|-|
+|extra-data.d|outside chroot|$TMP\_HOOKS\_PATH|-|
+|pre-install.d|in chroot|-|-|
+|install.d|in chroot|-|-|
+|post-install.d|in chroot|-|-|
+|block-device.d|outside chroot|$IMAGE\_BLOCK\_DEVICE={path}, $TARGET\_ROOT={path}|$IMAGE\_BLOCK\_DEVICE={path}|
+|finalise.d|in chroot|-|-|
+|cleanup.d|outside chroot|$ARCH=(i386 amd64 armhf), $TARGET_ROOT={path}|-|
 
 
 ### element之间的依赖

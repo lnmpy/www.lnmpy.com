@@ -23,4 +23,4 @@ deploy: clean build
 	aws s3 sync $(dist) s3://$(bucket) --acl public-read --region ap-northeast-2
 
 serve:
-	hexo server
+	hexo server -i 0.0.0.0 -o
