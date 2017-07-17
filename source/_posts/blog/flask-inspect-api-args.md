@@ -48,12 +48,12 @@ def create_user(user_name, email, phone):
 
 ## 目录
 
-0. 原生的decorator
+0. python decorator简介
 0. inspect解析函数的参数列表
+0. 获取request中所有参数
 
 
-
-## decorator入门
+## python decorator简介
 
 python的decorator比java的注解要简单得很多, 一个简单的decorator就像这样:
 
@@ -63,14 +63,11 @@ def sum(a, b):
     return a + b
 
 print sum(1, 2)  # 3
-print id(sum)
-
 
 def add_10(func):
     def f(*args, **kwargs):
         return func(*args, **kwargs) + 10
     return f
-
 
 @add_10
 def sum(a, b):
@@ -80,7 +77,7 @@ print sum(1, 2)  # 13
 
 ```
 
-一个decorator就是封装了当前的这个函数, 做一个事情, 然后返回另一个函数.
+其实一个decorator就是封装了当前的这个函数, 稍作封装, 然后返回了一个新函数
 
 ```python
 
@@ -103,9 +100,7 @@ print sum.__name__  # f
 ```
 
 
-所以上面的`add_10`做的事情其实就返回了一个新函数, 然后再找个函数里面call了`sum`并对结果加了10
-
-在输出中可以看到经过decorator之后的sum已经不是原来的那个sum, 而是在`add_10`中的f
+所以上面的`add_10`decorator过后的函数已经变成了一个新的函数, 在输出中可以看到`sum`已经不是原来的那个`sum`, 而是在`add_10`中的f
 
 ## inspect获取函数的参数列表
 
@@ -185,7 +180,7 @@ def collect_request_args():
 
 ## 总结
 
-Ok, 现在万事具备了, 把上面的code合并起来就能够work了
+OK, 基础的code已经都准备好了, 一个完整的例子如下:
 
 ```
 import inspect
@@ -248,5 +243,4 @@ app.run()
 
 ## 参考
 0. [pyton inspect library](https://docs.python.org/2/library/inspect.html)
-0. [python decorator](http://pythonhosted.org/decorator/documentation.html)
 
