@@ -1,6 +1,6 @@
 ---
 title: Python Flask中使用Decorator自动填充函数参数
-$ate: 2017-07-13 19:55:00
+date: 2017-07-13 19:55:00
 tags:
 - python
 - decorator
