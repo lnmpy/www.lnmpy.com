@@ -10,7 +10,7 @@ tags:
 ## 前言
 在写python flask的server code时, 有一个很累赘的code就是从request里面把参数取出来, 然后做校验, 比如说有这么一个api:
 
-```
+```python
 from flask import request, route
 
 @route('/create_user', methods=['POST'])
@@ -30,7 +30,7 @@ def create_user():
 
 所以如果说有一个方式能够将request中传过来的参数转换成如下的形式, 势必结构会清晰很多.
 
-```
+```python
 from flask import request, route
 
 @route('/create_user', methods=['POST'])
@@ -109,7 +109,7 @@ inspect是python当中一个比较底层的library, 通过inspect可以窥探到
 对于我们想要实现函数参数自动填充, 那么我们首先就要获得改函数的函数列表, 可以通过`inspect.getargspec`来实现.
 
 
-```
+```python
 import inspect
 
 def sum(a, b, c=10, *hello, **world):
@@ -164,7 +164,7 @@ print parse_func_args(sum, {'a': 1, 'c': 3})  # Exception: Parameters 'b' missin
 
 所以在验证并且call我们自己的route函数之前, 就需要简单的把上面提到的参数merge起来
 
-```
+```python
 from flask import request
 
 def collect_request_args():
@@ -182,7 +182,7 @@ def collect_request_args():
 
 OK, 基础的code已经都准备好了, 一个完整的例子如下:
 
-```
+```python
 import inspect
 import functools
 from flask import Flask, request, abort
