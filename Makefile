@@ -21,6 +21,7 @@ build:
 
 deploy: clean build
 	aws s3 sync $(dist) s3://$(bucket) --acl public-read --region ap-northeast-2 --cache-control max-age=86400
+	aws s3 cp $(dist)/index.html s3://$(bucket)/index.html --acl public-read --region ap-northeast-2 --cache-control no-cache
 
 serve:
 	hexo server -i 0.0.0.0 -o
