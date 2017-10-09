@@ -10,7 +10,7 @@ all: clean build serve
 
 install:
 	cd themes && rm -rf $(theme) && git clone git@github.com:elvis-macak/$(theme).git
-	npm install
+	yarn install
 
 clean:
 	rm -rf $(dist)/*
