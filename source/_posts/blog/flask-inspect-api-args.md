@@ -242,5 +242,5 @@ app.run()
 
 
 ## 参考
-0. [pyton inspect library](https://docs.python.org/2/library/inspect.html)
+0. [python inspect library](https://docs.python.org/2/library/inspect.html)
 
