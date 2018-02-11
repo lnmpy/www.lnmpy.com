@@ -1,5 +1,5 @@
 ---
-title: Proxychains fights GFW
+title: Proxychains Cross GFW
 date: 2017-09-21 13:15:00
 tags:
 - Shandowsocks
