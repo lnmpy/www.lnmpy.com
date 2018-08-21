@@ -6,10 +6,13 @@ date: 2014-03-24
 
 开门见山,最近在研究了一下Neutton的代码，看的过程中也将所了解的内容进行整理，整理内容如下:
 
+<!-- more -->
+
 ## Nova-compute如何发出请求
 当我执行nova boot的时候,nova-compute是如何执行接下来的操作呢,贴个代码说起来也太罗嗦了,还是直接用一个流程图来说明一下,然后再根据他图来说明一下就比较直观吧
 
 不过看图容易画图难啊,为了表示函数调用层级,我用数字放在方法前面,比如`0 methodA` -> `1 methodB` -> `2 methodC` -> `0 methodD`. 就表明,`methodA`里面调用了`methodB`,`methodB`里面调用了`methodC`,然后`methodA`结束了,开始调用`methodD`.OK,上图:
+
 
 <img src="/images/blog/neutron_interact_with_nova_compute.png" alt="nova-compute-build-instance" />
 

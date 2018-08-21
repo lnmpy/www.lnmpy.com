@@ -10,6 +10,8 @@ tags:
 ## 前言
 在写python flask的server code时, 有一个很累赘的code就是从request里面把参数取出来, 然后做校验, 比如说有这么一个api:
 
+<!-- more -->
+
 ```python
 from flask import request, route
 
@@ -44,7 +46,6 @@ def create_user(user_name, email, phone):
 ```
 
 这里面就要用到了python的decorator了
-
 
 ## 目录
 

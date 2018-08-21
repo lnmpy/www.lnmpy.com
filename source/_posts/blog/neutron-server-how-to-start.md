@@ -9,6 +9,8 @@ date: 2014-03-21
 正常的来看，应该是先看nova源码的。一方面网上资料也比较丰富，一方面也是更具有代表性。所以我也就不从头再来，浪费太多的精力去描述像router，deploy等库的使用了
 比如[臭蛋](http://www.choudan.net/)的两篇博客就写得挺详细的，结合代码看一下，倒也可以很快速的了解
 
+<!-- more -->
+
 [Nova Service启动](http://www.choudan.net/2013/08/09/Nova-Service%E5%90%AF%E5%8A%A8.html)
 
 [Openstack Paste Deploy介绍](http://www.choudan.net/2013/07/28/OpenStack-paste-deploy%E4%BB%8B%E7%BB%8D.html)

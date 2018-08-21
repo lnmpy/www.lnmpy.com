@@ -6,6 +6,8 @@ date: 2014-02-28
 
 懒得多写了， 就先后引用一下四篇文章吧，可以很清楚的描述一下，Neutron的各个概念。
 
+<!-- more -->
+
 1.[http://www.ustack.com/blog/neutron_intro/](http://www.ustack.com/blog/neutron_intro/)
 
 从Dashboard的的角度来讲解各个网络节点的连接关系，也有比如“网关臂”等的概念

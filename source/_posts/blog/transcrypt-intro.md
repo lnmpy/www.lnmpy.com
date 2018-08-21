@@ -17,6 +17,8 @@ tags:
 
 其他的特性可以参考其Github README的介绍, 如OpenSSL.
 
+<!-- more -->
+
 ## 下载/安装
 ```shell
 # 从github上下载原文件

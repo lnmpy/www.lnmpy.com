@@ -5,10 +5,6 @@ menu:
   Tags: /tags
   Github: https://github.com/elvis-macak
 
-# duoshuo comment
-duoshuo: false
-duoshuo_name:
-
 # disqus comment
 disqus: true
 disqus_shortname: lnmpy

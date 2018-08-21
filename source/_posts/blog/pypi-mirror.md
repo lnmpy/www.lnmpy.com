@@ -6,6 +6,8 @@ date: 2014-07-08
 
 介于Python的跨平台性，所以这里就不描述我本地的环境了
 
+<!-- more -->
+
 ## 安装pypimirror
 首先安装pypimirror
 

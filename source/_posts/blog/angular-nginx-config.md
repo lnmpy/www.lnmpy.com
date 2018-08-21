@@ -10,6 +10,8 @@ tags:
 
 最近为一个angular的project配置Nginx时踩了些坑, 在此mark一下.
 
+<!-- more -->
+
 ## 定义
 `proxy_pass`: 就是域名的代理, 将匹配的url请求转发到对应的domain中, 简单用法如下:
 ```

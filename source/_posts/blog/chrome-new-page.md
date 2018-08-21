@@ -4,8 +4,10 @@ categories: blog
 date: 2014-01-23
 ---
 
-
 Chrome的小白用户太多了，很多人都不知道可以直接在地址栏输入内容就可以搜索，这个“租值消耗”太大了。就像输入验证码真是太耗时间了，然后就有人打起了这个主意一样。Google估计是看不下去了，就rape(qiang jian)了广大人民群众的新标签页(New Tab)，然后就有了各种吐嘈, 这丫就长这样：
+
+<!-- more -->
+
 <img src="/images/blog/Chrome-shit-new-tab.png" alt="坑人的Chrome New Tab">
 
 为了干掉它，我可是纠结了不少功夫，走了不少弯路。

@@ -9,6 +9,8 @@ date: 2013-12-04
 
 对于环境的搭建，可以参考我的另外一篇博客[Ubuntu上搭建Guacamole](http://www.lnmpy.com/install-guacamole/)，不过有点啰嗦..。此处可以再简单描述下。
 
+<!-- more -->
+
 ### Guacamole的安装
 依赖的编译环境和测试运行环境，(不同的系统自己斟酌，假定你gcc等已经安装了,所以千万不要来一句`wget找不到啊`!- -)
 

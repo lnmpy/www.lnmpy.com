@@ -13,6 +13,8 @@ rabbitmq是使用erlang开发的,集群非常方便,且天生就支持并发分�
 0. 单一模式: 就是不做ha...
 0. 镜像模式模式: active/active模式的ha,当master挂掉了,按照策略选择某个slave(其实就是最先加入集群的那个slave)来担当master的角色
 
+<!-- more -->
+
 下面就直接切入正题,在实际中该如何针对rabbitmq进行ha
 
 ### 配置网络环境

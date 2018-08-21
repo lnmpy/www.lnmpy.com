@@ -12,6 +12,8 @@ date: 2013-12-21
 
 "search"若搜索的域名没有找到，则将域名拼接上search来搜索。下面会有例子来说明。
 
+<!-- more -->
+
 现实中有"qing.blog.sina.com.cn"，下面就以这个来说明，主要是说明"domain"和"search"的意义。
 
 /etc/resolv.conf配置如下
