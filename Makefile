@@ -9,7 +9,7 @@ theme = Hacker
 all: clean build serve
 
 install:
-	cd themes && rm -rf $(theme) && git clone https://github.com/elvis-macak/$(theme).git
+	cd themes && rm -rf $(theme) && git clone https://github.com/elvismacak/$(theme).git
 	yarn install
 
 clean:

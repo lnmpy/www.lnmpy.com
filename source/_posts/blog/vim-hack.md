@@ -67,4 +67,4 @@ Demo:
 PS:
 
  1. 截图软件是采用[ttyrec](https://github.com/mjording/ttyrec)和[ttygif](https://github.com/icholy/ttygif)来生成的.
- 2. 相应的vim其实也集成到了我的[repo](https://github.com/elvis-macak/elvis-repo)中(没有使用bundle)
+ 2. 相应的vim其实也集成到了我的[repo](https://github.com/elvismacak/elvis-repo)中(没有使用bundle)

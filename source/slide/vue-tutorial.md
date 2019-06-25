@@ -7,7 +7,7 @@ slidenumbers: true
 
 # Prepare the code environment
 ```
-git clone https://github.com/elvis-macak/vue-tutorial
+git clone https://github.com/elvismacak/vue-tutorial
 cd vue-tutorial && npm i
 ```
 
