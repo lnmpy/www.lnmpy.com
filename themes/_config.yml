@@ -9,7 +9,7 @@ disqus: true
 disqus_shortname: lnmpy
 
 # google analytics
-googleTrackId: 'UA-40753206-1'
+# googleTrackId:
 
 # baidu analytics
 baiduTrackId: '7c3c55661d86ad294eba178cc74a7d34'
@@ -18,4 +18,4 @@ baiduTrackId: '7c3c55661d86ad294eba178cc74a7d34'
 growingioTrackId: 'a27aef759ca83c9c'
 
 # sessionstack
-sessionstackId: 'fb6641dab3cd42f989466949f49c7c73'
+# sessionstackId:
