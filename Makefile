@@ -1,6 +1,3 @@
-export PATH := node_modules/.bin/:$(PATH)
-
-SHELL = /bin/bash
 DIST = public
 BUCKET = www.lnmpy.com
 THEME = Hacker
@@ -16,11 +13,11 @@ clean:
 
 build:
 	cp themes/_config.yml themes/${THEME}/
-	hexo g --debug
+	node_modules/.bin/hexo generate --debug
 
 deploy: clean build
 	aws s3 sync ${DIST} s3://${BUCKET} --acl public-read --region ap-northeast-2 --cache-control max-age=86400
 	aws s3 cp ${DIST}/index.html s3://${BUCKET}/index.html --acl public-read --region ap-northeast-2 --cache-control no-cache
 
 serve:
-	hexo server -i 0.0.0.0 -o
+	node_modules/.bin/hexo server
